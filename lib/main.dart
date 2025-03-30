@@ -18,25 +18,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-        builder: (_ , child){
-      return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-              create: (BuildContext context) =>HomeCubit()..fetchData()),
-          BlocProvider(
-              create: (BuildContext context) =>LoginCubit()),
-          ],
-        child: MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme:customTheme(),
-          routerConfig: GroupRoutes().router,
-        ),
-      );
-    }
+        designSize: Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) {
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                  create: (BuildContext context) =>
+                  HomeCubit()
+                    ..fetchData()),
+              BlocProvider(
+                  create: (BuildContext context) => LoginCubit()),
+            ],
+            child: MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              title: 'Flutter Demo',
+              theme: customTheme(),
+              routerConfig: GroupRoutes().router,
+            ),
+          );
+        }
     );
   }
 }
