@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(
               create: (BuildContext context) =>HomeCubit()..fetchData()),
-
+//git remote add origin https://github.com/MahmoudEzzat6/GoSmartTask.git
           BlocProvider(
               create: (BuildContext context) =>LoginCubit()),
           ],
