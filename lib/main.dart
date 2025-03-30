@@ -43,4 +43,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//git remote set-url origin https://github.com/MahmoudEzzat6/GoSmart.git
