@@ -11,7 +11,6 @@ class LessonModel {
     );
   }
 }
-
 class Lesson {
   String? name;
   String? description;
